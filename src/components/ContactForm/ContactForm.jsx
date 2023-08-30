@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
 import toast, { Toaster } from 'react-hot-toast';
 import { selectContacts } from 'redux/selectors';
-import { ReactComponent as AddIcon } from '../icons/plus-user.svg';
+// import { ReactComponent as AddIcon } from '../icons/plus-user.svg';
 import { Form, Label, Input, Button } from './ContactForm.styled';
 
 const ContactForm = () => {
@@ -85,7 +85,8 @@ const ContactForm = () => {
         </Label>
 
       <Button type="submit">
-        <AddIcon />
+        Add
+        {/* <AddIcon /> */}
       </Button>
         <Toaster
           position="top-right"
