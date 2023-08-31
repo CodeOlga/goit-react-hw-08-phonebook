@@ -34,6 +34,7 @@ const LoginForm = () => {
           placeholder="Email"
         />
       </Form.Item>
+
       <Form.Item
         name="password"
         rules={[
@@ -49,6 +50,7 @@ const LoginForm = () => {
           placeholder="Password"
         />
       </Form.Item>
+      
       <Form.Item>
         <Form.Item name="remember" valuePropName="checked" noStyle>
           <Checkbox>Remember me</Checkbox>

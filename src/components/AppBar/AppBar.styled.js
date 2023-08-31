@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  @media only screen and (max-width: 600px) {
-    width: 320px;
-  }
   width: 768px;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #2a363b;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  @media only screen and (max-width: 600px) {
+    width: 100vw;
+  }
 `;

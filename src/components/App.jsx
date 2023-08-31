@@ -6,9 +6,11 @@ import { useAuth } from './hooks';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { refreshUser } from '../redux/auth/auth-operations';
+import Layout from './Layout';
+import Loader from './Loader/Loader';
+
 import { Container } from './App.styled';
-import { Layout } from './Layout';
-import { Loader } from './Loader/Loader';
+import css from './App.module.css'
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -23,8 +25,10 @@ function App() {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return isRefreshing ? ( // if isRefreshing is true, then render Loader, else render Container
-    <Loader /> // Loader - spinner
+  return isRefreshing ? (
+    <div className={css.loaderWrap}>
+      <Loader /> 
+      </div> 
   ) : (
     <Container>
       <Routes>
@@ -55,7 +59,6 @@ function App() {
             }
           />
           <Route path="*" element={<Navigate to="/" />} />{' '}
-          {/* redirect to home page */}
         </Route>
       </Routes>
     </Container>

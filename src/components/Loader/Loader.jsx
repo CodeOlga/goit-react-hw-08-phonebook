@@ -1,6 +1,6 @@
 import { ProgressBar } from 'react-loader-spinner';
 
-export const Loader = () => (
+const Loader = () => (
   <ProgressBar
     height="80"
     width="80"
@@ -11,3 +11,5 @@ export const Loader = () => (
     barColor="#00adb5"
   />
 );
+
+export default Loader;

@@ -1,8 +1,7 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-
 import RegisterForm from '../components/RegisterForm/RegisterForm';
 
-export default function Register() {
+const Register = () => {
   return (
     <HelmetProvider>
       <div>
@@ -13,4 +12,6 @@ export default function Register() {
       </div>
     </HelmetProvider>
   );
-}
+};
+
+export default Register;

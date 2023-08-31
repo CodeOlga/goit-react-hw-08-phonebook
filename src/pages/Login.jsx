@@ -1,8 +1,7 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-
 import LoginForm from '../components/LoginForm/LoginForm';
 
-export default function Login() {
+const Login = () => {
   return (
     <HelmetProvider>
       <div>
@@ -13,4 +12,6 @@ export default function Login() {
       </div>
     </HelmetProvider>
   );
-}
+};
+
+export default Login;

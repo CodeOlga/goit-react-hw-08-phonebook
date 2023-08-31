@@ -1,20 +1,21 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { Empty } from 'antd';
+
 import {
   selectFilteredContacts,
   selectError,
   selectIsLoading,
 } from 'redux/selectors';
-import { Loader } from '../Loader/Loader';
 import { fetchContacts } from 'redux/operations';
+import Loader from '../Loader/Loader';
 import ContactItem from '../ContactItem/ContactItem';
+import { ListContainer, LoaderWrap } from './ContactList.styled';
 
-function ContactList() {
+const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
   const error = useSelector(selectError);
   const isLoading = useSelector(selectIsLoading);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,9 +23,11 @@ function ContactList() {
   }, [dispatch]);
 
   return (
-    <ul>
+    <ListContainer>
       {isLoading && !error ? (
-        <Loader />
+        <LoaderWrap>
+          <Loader />
+        </LoaderWrap>
       ) : filteredContacts.length === 0 && !error ? (
         <Empty />
       ) : (
@@ -32,7 +35,7 @@ function ContactList() {
           <ContactItem key={id} contact={{ id, name, number }} />
         ))
       )}
-    </ul>
+    </ListContainer>
   );
 }
 

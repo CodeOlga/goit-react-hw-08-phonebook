@@ -2,22 +2,26 @@ import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/auth-operations';
 import { useAuth } from '../hooks';
 import defaultAvatar from './default-avatar.png';
-import { Container, Name, Avatar, Button } from './UserMenu.styled';
-// import { ReactComponent as AddIcon } from '../icons/logout.svg';
+import { ReactComponent as AddIcon } from '../icons/logout.svg';
+import { Container, Name, Avatar, UserButton, WelcomeWrap } from './UserMenu.styled';
 
-export default function UserMenu() {
+const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
-
   const avatar = defaultAvatar;
 
   return (
     <Container>
-      <Avatar src={avatar} alt="avatar" />
-      <Name>Welcome {user.name}</Name>
-      <Button type="button" onClick={() => dispatch(logOut())}>
-        {/* <AddIcon /> */}
-      </Button>
+      <WelcomeWrap>
+        <Avatar src={avatar} alt="avatar" />
+        <Name>Welcome {user.name}</Name>
+      </WelcomeWrap>
+      
+      <UserButton type="button" onClick={() => dispatch(logOut())}>
+        <AddIcon />
+      </UserButton>
     </Container>
   );
 }
+
+export default UserMenu;

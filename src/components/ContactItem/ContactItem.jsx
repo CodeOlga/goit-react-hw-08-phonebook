@@ -3,17 +3,18 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteContact, editContact } from 'redux/operations';
 import { Modal, Input, Button, message, Popconfirm } from 'antd';
+
 import { ReactComponent as AddIcon } from '../icons/minus-user.svg';
 import { ReactComponent as EditIcon } from '../icons/edit-profile.svg';
 import {
   ContactItems,
   ContactName,
   ContactNumber,
-  Btn,
+  BtnDelete,
   BtnEdit,
 } from './ContactItem.styled';
 
-function ContactItem({ contact }) {
+const ContactItem = ({ contact }) => {
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
   const [newName, setNewName] = useState(contact.name);
@@ -23,8 +24,8 @@ function ContactItem({ contact }) {
     handleDelete(e.target.value);
     message.success('Click on Yes');
   };
+
   const cancel = e => {
-    console.log(e);
     message.error('Click on No');
   };
 
@@ -55,13 +56,17 @@ function ContactItem({ contact }) {
 
   return (
     <ContactItems>
+
       <ContactName>{contact.name}</ContactName>
+
       <ContactNumber href={`tel:${contact.number}`}>
         {contact.number}
       </ContactNumber>
+
       <BtnEdit onClick={handleEdit}>
         <EditIcon />
       </BtnEdit>
+
       <Popconfirm
         title="Delete the contact"
         description="Are you sure to delete this contact?"
@@ -70,9 +75,9 @@ function ContactItem({ contact }) {
         okText="Yes"
         cancelText="No"
       >
-        <Btn danger>
+        <BtnDelete>
           <AddIcon />
-        </Btn>
+        </BtnDelete>
       </Popconfirm>
 
       <Modal
@@ -97,6 +102,7 @@ function ContactItem({ contact }) {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
+          
           <label>New Number:</label>
           <Input
             type="text"
@@ -108,6 +114,7 @@ function ContactItem({ contact }) {
           />
         </div>
       </Modal>
+
     </ContactItems>
   );
 }

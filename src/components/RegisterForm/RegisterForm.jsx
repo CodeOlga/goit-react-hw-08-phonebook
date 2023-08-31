@@ -5,8 +5,8 @@ import { Button, Form, Input } from 'antd';
 
 const RegisterForm = () => {
   const [form] = Form.useForm();
-  const dispatch = useDispatch();
   const { isLoading, error } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
 
   const onFinish = values => {
     const { name, email, password, confirm } = values;
@@ -38,6 +38,7 @@ const RegisterForm = () => {
       },
     },
   };
+
   return (
     <Form
       {...formItemLayout}
@@ -126,6 +127,7 @@ const RegisterForm = () => {
       >
         <Input />
       </Form.Item>
+      
       <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit">
           Register

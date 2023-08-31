@@ -28,6 +28,5 @@ export const Button = styled.button`
 `;
 
 export const Text = styled.p`
-  /* padding: 10px 20px; */
   margin-bottom: 15px;
 `;
