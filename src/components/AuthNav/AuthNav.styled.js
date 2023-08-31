@@ -8,14 +8,10 @@ export const Links = styled(NavLink)`
   padding: 8px 16px;
   border-radius: 4px;
   font-weight: 700;
-  color: black;
+  color: #393e46;
 
   &.active {
     color: #fff;
-    background-color: #1677ff;
-  }
-
-  @media only screen and (max-width: 600px) {
-    justify-content: space-around;
+    background-color: #00adb5;
   }
 `;
