@@ -21,7 +21,7 @@ export const FormLabel = styled.label`
 `;
 
 export const FormInput = styled.input`
-  width: 93%;
+  // width: 93%;
   height: 45px;
   margin: 8px;
   border-radius: 20px;

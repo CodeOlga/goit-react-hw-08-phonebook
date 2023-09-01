@@ -13,7 +13,7 @@ export const FilterInput = styled.input`
   text-align: end;
   border: 0;
   outline: 0;
-  padding-right: 10px;
+  // padding-right: 10px;
   background-color: #e9e9e9;
   box-shadow: -5px -7px 9px #fff inset, 5px 11px 17px -13px #000 inset;
 `;
