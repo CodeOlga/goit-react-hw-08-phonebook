@@ -32,7 +32,8 @@ export const FormInput = styled.input`
   padding-right: 10px;
   background-color: #e9e9e9;
   -webkit-box-shadow: -5px -7px 9px #fff inset, 5px 11px 17px -13px #000 inset;
-  box-shadow: -5px -7px 9px #fff inset, 5px 11px 17px -13px #000 inset;
+  // box-shadow: -5px -7px 9px #fff inset, 5px 11px 17px -13px #000 inset;
+  box-shadow: -5px -7px 9px #fff, 5px 11px 17px -13px #000;
 `;
 
 export const FormButton = styled.button`
