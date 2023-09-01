@@ -26,10 +26,12 @@ export const FormInput = styled.input`
   border-radius: 20px;
   font-size: 24px;
   text-align: end;
+  // border: 1px solid #00adb5;
   border: 0;
   outline: 0;
   padding-right: 10px;
   background-color: #e9e9e9;
+  -webkit-box-shadow: -5px -7px 9px #fff inset, 5px 11px 17px -13px #000 inset;
   box-shadow: -5px -7px 9px #fff inset, 5px 11px 17px -13px #000 inset;
 `;
 
