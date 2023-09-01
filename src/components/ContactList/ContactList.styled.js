@@ -1,25 +1,14 @@
 import styled from 'styled-components';
 
 export const ListContainer = styled.ul`
-  // @media screen and (max-width: 480px) {
-  //   width: 300px;
-  // }
   display: flex;
   gap: 16px;
   flex-direction: column;
-  width: 300px;
-  padding: 40px;
+  width: 380px;
+  padding: 40px 0;
   border-radius: 20px;
   background-color: #e9e9e9;
   box-shadow: -6px -6px 9px #fff, 11px 11px 21px -8px #000;
-
-  // @media screen and (max-width: 480px) {
-  //   width: 300px;
-  // }
-
-  // @media screen and (max-width: 600px) {
-  //   width: 380px;
-  // }
 `;
 
 export const LoaderWrap = styled.div`

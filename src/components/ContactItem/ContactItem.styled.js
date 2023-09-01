@@ -4,8 +4,6 @@ export const ContactItems = styled.li`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 10px;
-  padding-left: 10px;
 `;
 
 export const ContactName = styled.span`
@@ -40,10 +38,6 @@ export const BtnEdit = styled.button`
 `;
 
 export const BtnDelete = styled.button`
-  @media only screen and (max-width: 600px) {
-    margin-right: 10px;
-  }
-
   > svg {
     width: 30px;
     height: 22px;
@@ -52,7 +46,8 @@ export const BtnDelete = styled.button`
 
   cursor: pointer;
   padding: 3px 10px 0 10px;
-  margin-left: 5px;
+  margin-left: 6px;
+  margin-right: 10px;
   font-size: 14px;
   border-radius: 6px;
   border: 1px solid red;
@@ -64,6 +59,3 @@ export const BtnDelete = styled.button`
     }
   }
 `;
-
-
-
