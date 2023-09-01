@@ -5,10 +5,11 @@ export const FilterTitle = styled.h3`
 `;
 
 export const FilterInput = styled.input`
-  width: 380px;
+  width: 370px;
   min-height: 45px;
   margin-bottom: 8px;
   border-radius: 20px;
+  padding-right: 10px;
   font-size: 16px;
   text-align: end;
   // border: 1px solid #00adb5;
