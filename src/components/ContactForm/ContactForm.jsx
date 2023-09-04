@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
 import toast, { Toaster } from 'react-hot-toast';
 import { selectContacts } from 'redux/selectors';
-import { Form, FormLabel, FormInput, FormButton } from './ContactForm.styled';
+import { Form, FormLabel, FormInput, FormButton, InputWrap } from './ContactForm.styled';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -55,7 +55,8 @@ const ContactForm = () => {
     <Form onSubmit={handleSubmit}>
       <FormLabel>
         Name
-      <FormInput
+      <InputWrap>
+          <FormInput
         type="text"
         name="name"
         value={name}
@@ -64,11 +65,13 @@ const ContactForm = () => {
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
         />
+      </InputWrap>
       </FormLabel>
 
       <FormLabel>
         Number
-      <FormInput
+      <InputWrap>
+          <FormInput
         type="tel"
         name="number"
         value={number}
@@ -76,7 +79,8 @@ const ContactForm = () => {
         pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
-        />
+          />
+        </InputWrap>
         </FormLabel>
 
       <FormButton type="submit">

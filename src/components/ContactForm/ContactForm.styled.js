@@ -20,26 +20,21 @@ export const FormLabel = styled.label`
   gap: 10px;
 `;
 
-export const FormInput = styled.input`
-  height: 45px;
-  margin: 8px;
+export const InputWrap = styled.div`
+  box-shadow: -5px -7px 9px #fff inset, 5px 11px 17px -13px #000 inset;
+  background-color: #e9e9e9;
   border-radius: 20px;
-  font-size: 24px;
+`;
+
+export const FormInput = styled.input`
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
   text-align: end;
-  // border: 1px solid #00adb5;
+  background-color: transparent;
   border: 0;
   outline: 0;
   padding-right: 10px;
-  background-color: #e9e9e9;
-  -webkit-box-shadow: -5px -7px 9px #fff inset, 5px 11px 17px -13px #000 inset;
-  box-shadow: -5px -7px 9px #fff inset, 5px 11px 17px -13px #000 inset;
-  // box-shadow: 0px 1px 2px 0px rgba(0, 172, 181, 0.7);
-  // 1px 2px 4px 0px rgba(0, 172, 181, 0.7);
-  // 2px 4px 8px 0px rgba(0, 172, 181, 0.7),
-  // 2px 4px 16px 0px rgba(0, 172, 181, 0.7);
-  // box-shadow:
-  // -5px -7px 9px #fff, 5px 11px 17px -13px #000, -5px -7px 9px #fff;
-  // 5px 11px 17px -13px #000;
 `;
 
 export const FormButton = styled.button`
